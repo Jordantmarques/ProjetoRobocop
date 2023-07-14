@@ -19,7 +19,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child: Text("Probocop")),
+          title: Center(child: Text("Projeto Robocop")),
         ),
         body: Padding(
           padding: const EdgeInsets.all(30.0),
