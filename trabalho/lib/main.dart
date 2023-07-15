@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
+String disciplina = '',
+       codigo = '',
+       nomeProf = '',
+       prova1 = '',
+       prova2 = '',
+       trabalho = '';
 
 void main() {
   void main() async {
@@ -22,8 +28,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    String disciplina = '', codigo = '', nomeProf = '';
-    String prova1 = '', prova2 = '', trabalho = '';
+    
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
