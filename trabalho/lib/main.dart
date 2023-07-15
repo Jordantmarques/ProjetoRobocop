@@ -57,7 +57,6 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
               TextField(
-                obscureText: true,
                 decoration: InputDecoration(
                   labelText: 'Nome do Professor',
                 ),
@@ -66,7 +65,6 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
               TextField(
-                obscureText: true,
                 decoration: InputDecoration(
                   labelText: 'Prova 1',
                 ),
@@ -75,7 +73,6 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
               TextField(
-                obscureText: true,
                 decoration: InputDecoration(
                   labelText: 'Prova 2',
                 ),
@@ -84,7 +81,6 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
               TextField(
-                obscureText: true,
                 decoration: InputDecoration(
                   labelText: 'Trabalho',
                 ),
