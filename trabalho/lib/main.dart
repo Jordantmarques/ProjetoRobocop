@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+
 
 void main() {
+  void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const MyApp());
+}
+
   runApp(const MyApp());
 }
 
@@ -85,9 +93,27 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
               ElevatedButton(
-                onPressed: () {},
-                child: Text('salvar dados'),
+               onPressed: () {
+               // Enviar os dados para o Firestore
+               FirebaseFirestore.instance.collection('dados').add({
+                 'disciplina': disciplina,
+                 'codigo': codigo,
+                 'nomeProf': nomeProf,
+                 'prova1': prova1,
+                 'prova2': prova2,
+                 'trabalho': trabalho,
+               });
+               // Limpar os campos após salvar
+               disciplina = '';
+               codigo = '';
+               nomeProf = '';
+               prova1 = '';
+               prova2 = '';
+               trabalho = '';
+              ,
+              hild: Text('salvar dados'),
               ),
+
             ],
           ),
         ),
