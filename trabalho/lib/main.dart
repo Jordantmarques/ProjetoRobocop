@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 String disciplina = '',
-       codigo = '',
-       nomeProf = '',
-       prova1 = '',
-       prova2 = '',
-       trabalho = '';
+    codigo = '',
+    nomeProf = '',
+    prova1 = '',
+    prova2 = '',
+    trabalho = '';
 
 void main() {
   void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  runApp(const MyApp());
-}
+    WidgetsFlutterBinding.ensureInitialized();
+    await Firebase.initializeApp();
+    runApp(const MyApp());
+  }
 
   runApp(const MyApp());
 }
@@ -28,11 +28,12 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    
+    String disciplina = '', codigo = '', nomeProf = '';
+    String prova1 = '', prova2 = '', trabalho = '';
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child: Text("Projeto Robocop")),
+          title: const Center(child: Text("Projeto Robocop")),
         ),
         body: Padding(
           padding: const EdgeInsets.all(30.0),
@@ -40,12 +41,12 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text(
+              const Text(
                 'Insira seus dados',
                 style: TextStyle(fontSize: 20),
               ),
               TextField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Disciplina',
                 ),
                 onChanged: (text) {
@@ -54,7 +55,7 @@ class _MyAppState extends State<MyApp> {
               ),
               TextField(
                 obscureText: true,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Código da disciplina',
                 ),
                 onChanged: (text) {
@@ -62,7 +63,7 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
               TextField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Nome do Professor',
                 ),
                 onChanged: (text) {
@@ -70,7 +71,7 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
               TextField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Prova 1',
                 ),
                 onChanged: (text) {
@@ -78,7 +79,7 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
               TextField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Prova 2',
                 ),
                 onChanged: (text) {
@@ -86,7 +87,8 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
               TextField(
-                decoration: InputDecoration(
+                obscureText: true,
+                decoration: const InputDecoration(
                   labelText: 'Trabalho',
                 ),
                 onChanged: (text) {
@@ -94,27 +96,9 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
               ElevatedButton(
-               onPressed: () {
-               // Enviar os dados para o Firestore
-               FirebaseFirestore.instance.collection('dados').add({
-                 'disciplina': disciplina,
-                 'codigo': codigo,
-                 'nomeProf': nomeProf,
-                 'prova1': prova1,
-                 'prova2': prova2,
-                 'trabalho': trabalho,
-               });
-               // Limpar os campos após salvar
-               disciplina = '';
-               codigo = '';
-               nomeProf = '';
-               prova1 = '';
-               prova2 = '';
-               trabalho = '';
-              ,
-              hild: Text('salvar dados'),
+                onPressed: () {},
+                child: const Text('salvar dados'),
               ),
-
             ],
           ),
         ),
