@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 String disciplina = '',
     codigo = '',
@@ -6,7 +7,14 @@ String disciplina = '',
     prova1 = '',
     prova2 = '',
     trabalho = '';
+
 void main() {
+  void main() async {
+    WidgetsFlutterBinding.ensureInitialized();
+    await Firebase.initializeApp();
+    runApp(const MyApp());
+  }
+
   runApp(const MyApp());
 }
 
@@ -53,7 +61,6 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
               TextField(
-                obscureText: true,
                 decoration: const InputDecoration(
                   labelText: 'Nome do Professor',
                 ),
@@ -62,7 +69,6 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
               TextField(
-                obscureText: true,
                 decoration: const InputDecoration(
                   labelText: 'Prova 1',
                 ),
@@ -71,7 +77,6 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
               TextField(
-                obscureText: true,
                 decoration: const InputDecoration(
                   labelText: 'Prova 2',
                 ),
