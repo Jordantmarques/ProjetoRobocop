@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child: Text("Projeto Robocop")),
+          title: const Center(child: Text("Projeto Robocop")),
         ),
         body: Padding(
           padding: const EdgeInsets.all(30.0),
@@ -31,12 +31,12 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text(
+              const Text(
                 'Insira seus dados',
                 style: TextStyle(fontSize: 20),
               ),
               TextField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Disciplina',
                 ),
                 onChanged: (text) {
@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
               ),
               TextField(
                 obscureText: true,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Código da disciplina',
                 ),
                 onChanged: (text) {
@@ -54,7 +54,7 @@ class _MyAppState extends State<MyApp> {
               ),
               TextField(
                 obscureText: true,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Nome do Professor',
                 ),
                 onChanged: (text) {
@@ -63,7 +63,7 @@ class _MyAppState extends State<MyApp> {
               ),
               TextField(
                 obscureText: true,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Prova 1',
                 ),
                 onChanged: (text) {
@@ -72,7 +72,7 @@ class _MyAppState extends State<MyApp> {
               ),
               TextField(
                 obscureText: true,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Prova 2',
                 ),
                 onChanged: (text) {
@@ -81,7 +81,7 @@ class _MyAppState extends State<MyApp> {
               ),
               TextField(
                 obscureText: true,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Trabalho',
                 ),
                 onChanged: (text) {
@@ -90,7 +90,7 @@ class _MyAppState extends State<MyApp> {
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: Text('salvar dados'),
+                child: const Text('salvar dados'),
               ),
             ],
           ),
