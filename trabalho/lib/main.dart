@@ -1,3 +1,4 @@
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -9,11 +10,6 @@ String disciplina = '',
     trabalho = '';
 
 void main() {
-  void main() async {
-    WidgetsFlutterBinding.ensureInitialized();
-    await Firebase.initializeApp();
-    runApp(const MyApp());
-  }
 
   runApp(const MyApp());
 }
@@ -26,7 +22,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   @override
   void initState() {
     super.initState();
@@ -36,7 +31,7 @@ class _MyAppState extends State<MyApp> {
   Future<void> initializeFirebase() async {
     await Firebase.initializeApp();
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -106,7 +101,8 @@ class _MyAppState extends State<MyApp> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  DatabaseReference databaseRef = FirebaseDatabase.instance.reference();
+                  DatabaseReference databaseRef =
+                      FirebaseDatabase.instance.reference();
                   databaseRef.child('disciplinas').push().set({
                     'disciplina': disciplina,
                     'codigo': codigo,
@@ -116,10 +112,10 @@ class _MyAppState extends State<MyApp> {
                     'trabalho': trabalho,
                   }).then((value) {
                     // O código aqui será executado quando os dados forem gravados com sucesso
-                    print('Dados gravados no banco de dados com sucesso!');
+                    //print('Dados gravados no banco de dados com sucesso!');
                   }).catchError((error) {
                     // O código aqui será executado se ocorrer um erro ao gravar os dados
-                    print('Erro ao gravar os dados no banco de dados: $error');
+                    //print('Erro ao gravar os dados no banco de dados: $error');
                   });
                 },
                 child: const Text('salvar dados'),
