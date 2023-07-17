@@ -26,6 +26,17 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+
+  @override
+  void initState() {
+    super.initState();
+    initializeFirebase(); // Chamando o método para inicializar o Firebase
+  }
+
+  Future<void> initializeFirebase() async {
+    await Firebase.initializeApp();
+  }
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -94,7 +105,23 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  DatabaseReference databaseRef = FirebaseDatabase.instance.reference();
+                  databaseRef.child('disciplinas').push().set({
+                    'disciplina': disciplina,
+                    'codigo': codigo,
+                    'nomeProf': nomeProf,
+                    'prova1': prova1,
+                    'prova2': prova2,
+                    'trabalho': trabalho,
+                  }).then((value) {
+                    // O código aqui será executado quando os dados forem gravados com sucesso
+                    print('Dados gravados no banco de dados com sucesso!');
+                  }).catchError((error) {
+                    // O código aqui será executado se ocorrer um erro ao gravar os dados
+                    print('Erro ao gravar os dados no banco de dados: $error');
+                  });
+                },
                 child: const Text('salvar dados'),
               ),
             ],
