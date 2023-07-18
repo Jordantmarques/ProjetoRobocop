@@ -1,6 +1,5 @@
 # ProjetoRobocop
-Projeto de aplicação mobile com conexão com o firebase fazendo uso de Flutter
-unico 
+Projeto de aplicação mobile com conexão com o Firebase fazendo uso de Flutter único.
 
 # Projeto Robocop
 Este é um projeto simples em Flutter que permite ao usuário inserir dados relacionados a disciplinas e seus respectivos detalhes, como código, nome do professor, notas de provas e trabalho. Os dados inseridos pelo usuário são salvos no banco de dados Firebase em tempo real usando o pacote firebase_database.
