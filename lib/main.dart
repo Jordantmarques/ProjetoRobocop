@@ -108,17 +108,6 @@ class _MyAppState extends State<MyApp> {
                   }).then((value) {
                     // O código aqui será executado quando os dados forem gravados com sucesso
                     print('Dados gravados no banco de dados com sucesso!');
-
-                    // Limpar os campos após salvar os dados:
-                    setState(() {
-                    disciplina = '';
-                    codigo = '';
-                    nomeAluno = '';
-                    prova1 = '';
-                    prova2 = '';
-                    trabalho = '';
-                    });
-                    print('Dados gravados no banco de dados com sucesso!');
                    }).catchError((error) {
                     // O código aqui será executado se ocorrer um erro ao gravar os dados
                     print('Erro ao gravar os dados no banco de dados: $error');
