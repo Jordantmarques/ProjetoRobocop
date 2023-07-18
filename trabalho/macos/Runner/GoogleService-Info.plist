@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>865453518820-b8cdm9n90p7cv0sd4ls7e3jhf8nl42nk.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.865453518820-b8cdm9n90p7cv0sd4ls7e3jhf8nl42nk</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD05bw5_GIXi3cGhLFnXmMlVSO18rpNxr4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>865453518820</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.trabalho.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>projeto-robocop</string>
+	<key>STORAGE_BUCKET</key>
+	<string>projeto-robocop.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:865453518820:ios:4770197ea427a9a9a7a1f1</string>
+</dict>
+</plist>
