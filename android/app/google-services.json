@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "606064781117",
+    "firebase_url": "https://projeto-robocop-a0fe9-default-rtdb.firebaseio.com",
+    "project_id": "projeto-robocop-a0fe9",
+    "storage_bucket": "projeto-robocop-a0fe9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606064781117:android:6cbaeba09795f5ee1bc754",
+        "android_client_info": {
+          "package_name": "com.projeto.robocop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "606064781117-1a9vq8t3t6csirf70egom8a2apronvgs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.projeto.robocop",
+            "certificate_hash": "b087eb91d4d02e92f55cd03f1c0354d5f9845077"
+          }
+        },
+        {
+          "client_id": "606064781117-n56v0n94qaqdvlsounf9kv9b33e58rv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8vu5Ztf-V4DRSswjBBanrlBzGqrxOLFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "606064781117-n56v0n94qaqdvlsounf9kv9b33e58rv9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "606064781117-4tt7la721qht2373hdtmircuk61rbott.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
