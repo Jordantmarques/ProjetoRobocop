@@ -14,8 +14,8 @@ void main() async {
 // Inicializar o Firebase
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-  options: DefaultFirebaseOptions.currentPlatform,
-);
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   // Executar o aplicativo Flutter
   runApp(MyApp());
 }
@@ -28,7 +28,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
+  // ignore: non_constant_identifier_names
   void LimparCampos() {
     setState(() {
       disciplina = '';
@@ -118,9 +118,9 @@ class _MyAppState extends State<MyApp> {
                     'trabalho': trabalho,
                   }).then((value) {
                     // Dados gravados no banco de dados com sucesso!
-                    LimparCampos(); // Chamando o método para limpar os campos após salvar os dados
+                    Future.delayed(Duration.zero,LimparCampos); // Chamando o método para limpar os campos após salvar os dados
                     print('Dados gravados no banco de dados com sucesso!');
-                   }).catchError((error) {
+                  }).catchError((error) {
                     // O código aqui será executado se ocorrer um erro ao gravar os dados
                     print('Erro ao gravar os dados no banco de dados: $error');
                   });
