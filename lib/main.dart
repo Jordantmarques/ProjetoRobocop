@@ -29,6 +29,17 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
 
+  void LimparCampos() {
+    setState(() {
+      disciplina = '';
+      codigo = '';
+      nomeAluno = '';
+      prova1 = '';
+      prova2 = '';
+      trabalho = '';
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -106,18 +117,8 @@ class _MyAppState extends State<MyApp> {
                     'prova2': prova2,
                     'trabalho': trabalho,
                   }).then((value) {
-                    // O código aqui será executado quando os dados forem gravados com sucesso
-                    print('Dados gravados no banco de dados com sucesso!');
-
-                    // Limpar os campos após salvar os dados:
-                    setState(() {
-                    disciplina = '';
-                    codigo = '';
-                    nomeAluno = '';
-                    prova1 = '';
-                    prova2 = '';
-                    trabalho = '';
-                    });
+                    // Dados gravados no banco de dados com sucesso!
+                    LimparCampos(); // Chamando o método para limpar os campos após salvar os dados
                     print('Dados gravados no banco de dados com sucesso!');
                    }).catchError((error) {
                     // O código aqui será executado se ocorrer um erro ao gravar os dados
